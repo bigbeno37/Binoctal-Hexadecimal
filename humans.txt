@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    bigbeno37 -- Developer / Student of RMIT, Melbourne -- @bigbeno37
+
+# THANKS
+
+    to RMIT for giving me inspiration to do this, and to my parents for
+    raising me up the way they did
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
