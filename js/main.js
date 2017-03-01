@@ -1,8 +1,11 @@
 var randomNumber;
 var questionBase;
 var answerBase;
+var score = 0;
 
 $(document).ready(function() {
+	/* VARIABLES */
+
 	// Define the bases questions will be asked in
 	var bases = [2, 8, 10, 16];
 
@@ -12,13 +15,28 @@ $(document).ready(function() {
 	// Define the element that will be replaced by the generated answer base
 	var answerElement = ".answerBase";
 
+	// Define the element that will be replaced by the current score
+	var scoreElement = ".score";
+
+	/* END VARIABLES */
+
+	updateScore(scoreElement);
+
 	generateNumberAndShowToScreen(bases, element);
-	generateBaseToConvertTo(bases, answerElement);
+	generateBaseToAnswerIn(bases, answerElement);
 
 	$(".answerForm").submit(function() {
-		if ( parseInt( $(".answerForm input").val() ) == (randomNumber >>> 0).toString(answerBase)) {
+		if ( parseInt( $(".answerForm input").val(), answerBase ) == randomNumber) {
 			$(".answerForm .form-group").removeClass("has-error");
 			$(".answerForm .form-group").addClass("has-success");
+
+			score++;
+			updateScore(scoreElement);
+
+			generateNumberAndShowToScreen(bases, element);
+			generateBaseToAnswerIn(bases, answerElement);
+
+
 		}
 
 		else {
@@ -47,8 +65,10 @@ function generateNumberAndShowToScreen(bases, element) {
 }
 
 // Take in an array of bases, and the element we want to replace to show the generated number
-function generateBaseToConvertTo(bases, element) {
+function generateBaseToAnswerIn(bases, element) {
 	
+	// Generate a base for the question to be converted to and make sure
+	// that the answer's base is not the same as the answer's base
 	do {
 		
 		answerBase = bases[ Math.floor( Math.random() * bases.length ) ];
@@ -57,4 +77,11 @@ function generateBaseToConvertTo(bases, element) {
 
 	// Add the random number to the DOM
 	$(element).html("What is this in base " + answerBase + "?");
+
+	$(".answerForm input").val("");
+}
+
+// Take in element to be used as the score, and update to the latest score
+function updateScore(element) {
+	$(element).text(score);
 }
