@@ -2,6 +2,8 @@ var randomNumber;
 var questionBase;
 var answerBase;
 var score = 0;
+var gameMode;
+var gameModes;
 
 $(document).ready(function() {
 	/* VARIABLES */
@@ -18,7 +20,40 @@ $(document).ready(function() {
 	// Define the element that will be replaced by the current score
 	var scoreElement = ".score";
 
+	// Define the available game modes
+	gameModes = {
+		EASY: 1,
+		MEDIUM: 2,
+		HARD: 3,
+	}
+
 	/* END VARIABLES */
+
+	/* SET THE CURRENT GAME MODE */
+	// By default, the game is set to easy
+	gameMode = gameModes.EASY;
+	$(".randomNumber").css("color", "#4cae4c");
+
+	$(".easy").click(function() { 
+		gameMode = gameModes.EASY;
+		generateNumberAndShowToScreen(bases, element);
+		generateBaseToAnswerIn(bases, answerElement);
+		$(".randomNumber").css("color", "#4cae4c");
+	});
+
+	$(".medium").click(function() { 
+		gameMode = gameModes.MEDIUM;
+		generateNumberAndShowToScreen(bases, element);
+		generateBaseToAnswerIn(bases, answerElement);
+		$(".randomNumber").css("color", "#eea236");
+	});
+
+	$(".hard").click(function() { 
+		gameMode = gameModes.HARD;
+		generateNumberAndShowToScreen(bases, element);
+		generateBaseToAnswerIn(bases, answerElement);
+		$(".randomNumber").css("color", "#d43f3a");
+	});
 
 	updateScore(scoreElement);
 
@@ -54,7 +89,18 @@ function generateNumberAndShowToScreen(bases, element) {
 	questionBase = bases[ Math.floor( Math.random() * bases.length ) ];
 
 	// The random decimal number to be converted...
-	randomNumber = Math.floor(Math.random() * 100);
+	switch (gameMode) {
+		case gameModes.EASY:
+			randomNumber = Math.floor(Math.random() * 50);
+			break;
+		case gameModes.MEDIUM:
+			randomNumber = Math.floor(Math.random() * 100);
+			break;
+		case gameModes.HARD:
+			randomNumber = Math.floor(Math.random() * 2000);
+			break;
+	}
+	
 
 	// Convert the randomNumber to the base, utilising a solution found here:
 	// http://stackoverflow.com/questions/9939760/how-do-i-convert-an-integer-to-binary-in-javascript
