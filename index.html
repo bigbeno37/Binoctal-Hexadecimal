@@ -20,28 +20,31 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
 
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
         <link rel="stylesheet" href="css/main.css">
 
     </head>
     <body>
-        <span class="glyphicon glyphicon-ok tick"></span>
+        
 
         <div class="container">
-            <div class="row">
-                <div class="col-xs-6 difficulty">
+            <div class="row difficulty-score">
+                <div class="col-xs-7 difficulty">
                     <button class="btn btn-success easy">Easy</button>
                     <button class="btn btn-warning medium">Medium</button>
                     <button class="btn btn-danger hard">Hard</button>
                 </div>
-                <div class="col-xs-6 text-right">
-                    <h3>Score: <span class="score"></span></h3>
+                <div class="col-xs-5 text-right">
+                    <h3 class="scoreText">Score: <span class="score"></span></h3>
                 </div>
             </div>
 
-            <div class="question-answer-container">
+            <div class="questionAnswerContainer">
                 <div class="row">
                     <div class="col-xs-12 text-center">
                         <h1 class="randomNumber"></h1>
+                        <span class="glyphicon glyphicon-ok tick animated"></span>
                     </div>
     
                     <div class="col-xs-12">

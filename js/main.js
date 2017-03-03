@@ -139,7 +139,8 @@ function updateScore(element) {
 
 function displayCorrectAnswerAnimation (element) {
 	$(element).css("display", "inline-block");
-	$(element).addClass("animated zoomIn");
+	$(".randomNumber").css("display", "none");
+	$(element).addClass("zoomIn");
 	
 	setTimeout(function() {
 		$(element).removeClass("zoomIn");
@@ -147,7 +148,8 @@ function displayCorrectAnswerAnimation (element) {
 		
 		setTimeout(function() {
 			$(element).removeClass("zoomOut").css("display", "none");
-		}, 500)
+			$(".randomNumber").css("display", "inline-block");
+		}, 200)
 		
-	}, 900);
+	}, 700);
 }
