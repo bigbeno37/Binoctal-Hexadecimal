@@ -17,13 +17,16 @@
         <!-- Bootstrap stuff -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <!-- End Bootstrap stuff -->
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
 
         <link rel="stylesheet" href="css/main.css">
 
     </head>
     <body>
+        <span class="glyphicon glyphicon-ok tick"></span>
 
-        <div class="container difficulty-score">
+        <div class="container">
             <div class="row">
                 <div class="col-xs-6 difficulty">
                     <button class="btn btn-success easy">Easy</button>
@@ -34,23 +37,23 @@
                     <h3>Score: <span class="score"></span></h3>
                 </div>
             </div>
-        </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                    <h1 class="randomNumber"></h1>
-                </div>
-
-                <div class="col-xs-12">
-                    <form class="answerForm">
-                        <div class="form-group">
-                            <label for="answer" class="answerBase"></label>
-                            <input type="text" name="answer" class="form-control" />
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Check</button>
-                    </form>
+            <div class="question-answer-container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h1 class="randomNumber"></h1>
+                    </div>
+    
+                    <div class="col-xs-12">
+                        <form class="answerForm">
+                            <div class="form-group">
+                                <label for="answer" class="answerBase"></label>
+                                <input type="text" name="answer" class="form-control" />
+                            </div>
+    
+                            <button type="submit" class="btn btn-primary">Check</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

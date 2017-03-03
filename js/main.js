@@ -19,13 +19,16 @@ $(document).ready(function() {
 
 	// Define the element that will be replaced by the current score
 	var scoreElement = ".score";
+	
+	// Define the element that will have an animation applied when the question is answered successfully
+	var tickElement = ".tick";
 
 	// Define the available game modes
 	gameModes = {
 		EASY: 1,
 		MEDIUM: 2,
 		HARD: 3,
-	}
+	};
 
 	/* END VARIABLES */
 
@@ -67,6 +70,8 @@ $(document).ready(function() {
 
 			score++;
 			updateScore(scoreElement);
+			
+			displayCorrectAnswerAnimation(tickElement);
 
 			generateNumberAndShowToScreen(bases, element);
 			generateBaseToAnswerIn(bases, answerElement);
@@ -130,4 +135,19 @@ function generateBaseToAnswerIn(bases, element) {
 // Take in element to be used as the score, and update to the latest score
 function updateScore(element) {
 	$(element).text(score);
+}
+
+function displayCorrectAnswerAnimation (element) {
+	$(element).css("display", "inline-block");
+	$(element).addClass("animated zoomIn");
+	
+	setTimeout(function() {
+		$(element).removeClass("zoomIn");
+		$(element).addClass("zoomOut");
+		
+		setTimeout(function() {
+			$(element).removeClass("zoomOut").css("display", "none");
+		}, 500)
+		
+	}, 900);
 }
