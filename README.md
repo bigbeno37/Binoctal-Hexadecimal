@@ -1,2 +1,2 @@
-# Binoctal-Hexadecimal
-A short game on base conversions!
+# Binoctal Hexadecimal
+TODO
