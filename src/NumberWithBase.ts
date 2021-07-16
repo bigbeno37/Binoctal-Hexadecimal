@@ -1,8 +1,10 @@
 export type SupportedBases = 2 | 8 | 10 | 16;
 
+export const getSupportedBases = (): SupportedBases[] => [2, 8, 10, 16];
+
 export type NumberWithBase = {
-    number: number,
+    number: string,
     base: SupportedBases
 };
 
-export const convertToBase = (number: number, base: number) => number.toString(base);
+export const convertFromBase10ToNewBase = (number: number, base: number) => number.toString(base);
