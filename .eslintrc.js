@@ -38,6 +38,7 @@ module.exports = {
 		],
 		'vue/no-multiple-template-root': 'off',
 		'vue/html-indent': ['error', 'tab'],
-		'vue/script-indent': ['error', 'tab']
+		'vue/script-indent': ['error', 'tab'],
+		'vue/multi-word-component-names': 'off'
 	}
 };
