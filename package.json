@@ -9,6 +9,7 @@
     "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },
   "dependencies": {
+    "daisyui": "^2.14.3",
     "vue": "^3.2.33"
   },
   "devDependencies": {
