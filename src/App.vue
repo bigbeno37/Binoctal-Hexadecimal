@@ -19,9 +19,3 @@ const onDifficultyClicked = (newDifficulty: 'easy' | 'medium' | 'hard') => {
 		</div>
 	</div>
 </template>
-
-<style scoped>
-	h1 {
-		font-family: 'Source Code Pro', ui-sans-serif;
-	}
-</style>

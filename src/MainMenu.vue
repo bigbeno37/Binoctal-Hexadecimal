@@ -12,3 +12,9 @@ const props = defineProps<{ onDifficultyClicked: (difficulty: 'easy' | 'medium' 
 		<button class="btn btn-accent btn-lg self-center w-60" @click="props.onDifficultyClicked('hard')">Hard</button>
 	</div>
 </template>
+
+<style scoped>
+    h1 {
+        font-family: 'Source Code Pro', ui-sans-serif;
+    }
+</style>
