@@ -134,12 +134,12 @@ export function GameScreen({ difficulty, onGameEnd }: GameScreenProps) {
           )}
 
           <div className="text-center space-y-6">
-            <div className="relative">
-              <div className="text-6xl font-mono font-bold text-gray-800 mb-2">
-                {displayedNumber}
-              </div>
-              <div className="absolute -bottom-2 right-4 text-sm text-gray-500 font-semibold">
-                base {gameState.currentBase}
+            <div className="relative flex justify-center">
+              <div className="text-6xl font-mono font-bold text-gray-800 mb-2 flex items-end">
+                <span>{displayedNumber}</span>
+                <sub className="text-2xl text-gray-500 ml-1 -mb-2">
+                  {gameState.currentBase}
+                </sub>
               </div>
             </div>
 
