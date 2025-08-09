@@ -27,9 +27,10 @@ They are presented with the difficulty buttons underneath, with the message 'Pla
 ## Code Requirements
 
 Ensure that Prettier and ESLint are installed.
+ESLint should be configured to not use any rules that conflict with Prettier.
 ESLint should be configured to use fairly strict rules, including TypeScript and React specific lints.
 This project uses the latest version of Tailwind, v4, which has a different install process than Tailwind v3.
-After every change made, run the formatter, then the TypeScript compiler, then the ESLint linter, then unit tests.
+After every change made, run the TypeScript compiler, then the ESLint linter, then unit tests, then Prettier.
 
 ## Version Control
 

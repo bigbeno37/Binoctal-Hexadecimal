@@ -57,7 +57,6 @@ export default tseslint.config(
       'react/jsx-key': 'error',
       'react/no-array-index-key': 'warn',
       'react/no-unused-state': 'error',
-      'react/self-closing-comp': 'warn',
 
       // TypeScript specific strict rules
       '@typescript-eslint/no-unused-vars': [
@@ -91,7 +90,6 @@ export default tseslint.config(
       'prefer-template': 'error',
       'no-duplicate-imports': 'error',
       'no-unused-expressions': 'error',
-      'no-nested-ternary': 'warn',
       'no-unneeded-ternary': 'error',
 
       // Accessibility

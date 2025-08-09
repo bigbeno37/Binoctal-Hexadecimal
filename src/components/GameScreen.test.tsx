@@ -144,9 +144,7 @@ describe('GameScreen', () => {
   it('should convert user input to uppercase', async () => {
     render(<GameScreen difficulty="Easy" onGameEnd={mockOnGameEnd} />);
 
-    const input = screen.getByPlaceholderText(
-      'Enter hexadecimal value'
-    );
+    const input = screen.getByPlaceholderText('Enter hexadecimal value');
 
     await user.type(input, 'f');
 
@@ -170,9 +168,7 @@ describe('GameScreen', () => {
   it('should clear input after correct answer', async () => {
     render(<GameScreen difficulty="Easy" onGameEnd={mockOnGameEnd} />);
 
-    const input = screen.getByPlaceholderText(
-      'Enter hexadecimal value'
-    );
+    const input = screen.getByPlaceholderText('Enter hexadecimal value');
 
     await user.type(input, 'F');
     await user.click(screen.getByText('Submit'));
