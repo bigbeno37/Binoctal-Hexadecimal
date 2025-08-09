@@ -166,7 +166,7 @@ export function GameScreen({ difficulty, onGameEnd }: GameScreenProps) {
                   placeholder={`Enter ${targetBaseName} value`}
                   className={cn(
                     'text-center text-2xl font-mono w-64 h-12',
-                    showIncorrectAnimation && 'border-red-500 animate-shake'
+                    showIncorrectAnimation && 'bg-red-100 border-4 border-red-500 animate-shake'
                   )}
                   disabled={!gameState.gameActive}
                 />
