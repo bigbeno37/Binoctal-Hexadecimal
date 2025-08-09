@@ -25,7 +25,11 @@ Once the timer runs out, the user is shown a message saying 'Game Over', with th
 They are presented with the difficulty buttons underneath, with the message 'Play again?'
 
 ## Code Requirements
-
 Ensure that Prettier and ESLint are installed.
 ESLint should be configured to use fairly strict rules, including TypeScript and React specific lints.
 This project uses the latest version of Tailwind, v4, which has a different install process than Tailwind v3.
+After every change made, run the formatter, then the TypeScript compiler, then the ESLint linter.
+
+## Version Control
+After any significant changes, propose a commit with a message describing the changes.
+If I accept your proposal, make the commit and push it to GitHub.
